@@ -1,0 +1,216 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-25T11:09:25.616066+00:00",
+  "configuration": {
+    "seed": 2026,
+    "expected_rows": 13979592,
+    "train_fraction": 0.7,
+    "stratify": [
+      "treatment",
+      "visit"
+    ],
+    "primary_outcome": "visit",
+    "secondary_outcome": "conversion",
+    "primary_model": "x_learner",
+    "bootstrap_repetitions": 200,
+    "bootstrap_ci": "95% percentile",
+    "budgets": [
+      0.1,
+      0.3,
+      0.5
+    ],
+    "threads": 4,
+    "lightgbm": {
+      "n_estimators": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "min_child_samples": 2000,
+      "subsample": 0.8,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.8,
+      "force_col_wise": true,
+      "deterministic": true,
+      "verbosity": -1
+    },
+    "outcome_objective": "binary",
+    "effect_objective": "regression_l2",
+    "aa_repetitions": 1000,
+    "power_repetitions": 500,
+    "power_total_n": [
+      10000,
+      100000,
+      1000000
+    ],
+    "peeking_repetitions": 1000,
+    "peeking_increment_per_arm": 10000,
+    "peeking_looks": 50,
+    "coverage_repetitions": 1000,
+    "coverage_per_arm_n": [
+      500,
+      2000,
+      10000
+    ],
+    "posterior_draws_full": 100000,
+    "posterior_draws_coverage": 2000
+  },
+  "git": {
+    "commit": "6928958aac539e9314c5d992203a826e9d1e5037",
+    "source": "local_repository",
+    "working_tree_dirty": false,
+    "release_source_matches": true
+  },
+  "source_sha256": "e66a508e5c11d877b8632bf80b89f46b7cb81f639299c63dd4f70f983f3a9cb7",
+  "package_versions": {
+    "narwhals": "2.27.1",
+    "scikit-learn": "1.9.1",
+    "pexpect": "4.9.0",
+    "cloudpickle": "3.1.2",
+    "kiwisolver": "1.5.1",
+    "ptyprocess": "0.7.0",
+    "packaging": "26.3",
+    "joblib": "1.6.0",
+    "nbformat": "5.11.1",
+    "Pygments": "2.21.0",
+    "prompt_toolkit": "3.0.53",
+    "pyarrow": "26.0.0",
+    "jsonschema-specifications": "2025.9.1",
+    "criteo-ab-uplift": "1.0.0",
+    "pytz": "2026.5",
+    "ipykernel": "7.4.0",
+    "requests": "2.34.2",
+    "certifi": "2026.10.23",
+    "duckdb": "1.5.6",
+    "jsonschema": "4.26.0",
+    "matplotlib-inline": "0.2.2",
+    "wcwidth": "0.9.4",
+    "traitlets": "5.16.1",
+    "jedi": "0.20.1",
+    "ipython_pygments_lexers": "1.1.1",
+    "numpy": "2.5.4",
+    "tornado": "6.6",
+    "tzdata": "2026.5",
+    "stack-data": "0.6.3",
+    "pillow": "13.0.0",
+    "contourpy": "1.4.0",
+    "tqdm": "4.70.1",
+    "pip": "25.0.1",
+    "pyzmq": "27.2.0",
+    "urllib3": "2.8.0",
+    "appnope": "1.0.0",
+    "matplotlib": "3.11.2",
+    "jupyter_client": "8.10.0",
+    "jupyter_core": "5.9.1",
+    "pure_eval": "0.2.4",
+    "cycler": "0.12.1",
+    "referencing": "0.37.0",
+    "pandas": "2.3.3",
+    "lightgbm": "4.7.0",
+    "threadpoolctl": "3.7.0",
+    "nbclient": "0.11.0",
+    "scikit-uplift": "0.5.1",
+    "rpds-py": "2026.9.1",
+    "attrs": "26.1.0",
+    "executing": "2.3.0",
+    "nest-asyncio2": "1.7.4",
+    "debugpy": "1.8.22",
+    "fastjsonschema": "2.22.2",
+    "typing_extensions": "4.16.0",
+    "asttokens": "3.0.2",
+    "psutil": "7.2.2",
+    "fonttools": "4.67.0",
+    "python-dateutil": "3.0.0",
+    "parso": "0.8.7",
+    "charset-normalizer": "3.5.2",
+    "pyparsing": "3.3.3",
+    "six": "1.17.0",
+    "scipy": "1.18.1",
+    "platformdirs": "4.13.5",
+    "idna": "3.20",
+    "comm": "0.2.3",
+    "ipython": "9.17.1"
+  },
+  "seeds": {
+    "analysis": 2026,
+    "simulation_root": 2026,
+    "split": 2026,
+    "lightgbm": 2026,
+    "targeting_tie_break": 2026,
+    "uplift_row_bootstrap": 2027
+  },
+  "hardware": {
+    "os": "macOS-26.6.2-arm64-arm-64bit",
+    "architecture": "arm64",
+    "cpu": "Apple M4",
+    "physical_cores": 10,
+    "logical_cores": 10,
+    "ram_bytes": 17179869184,
+    "python": "3.12.14"
+  },
+  "stage_timings": {
+    "Verify or download official dataset": {
+      "wall_seconds_this_invocation": 0.11429183278232813
+    },
+    "Audit and prepare all rows": {
+      "wall_seconds_this_invocation": 0.12600787519477308,
+      "cache_existed_before_run": true
+    },
+    "Frequentist, Bayesian and exposure IV": {
+      "wall_seconds_this_invocation": 0.019606916001066566
+    },
+    "Full-data Lin adjustment with HC2": {
+      "wall_seconds_this_invocation": 1.4724303749389946
+    },
+    "Finite-population experiment simulations": {
+      "wall_seconds_this_invocation": 1.1148656660225242
+    },
+    "Full-data uplift and paired bootstrap": {
+      "wall_seconds_this_invocation": 2.0791776478290558e-07,
+      "reused_completed_result": true,
+      "model_cache_existed_before_invocation": true,
+      "saved_uplift_computation_seconds": 193.69688291708007
+    },
+    "Generate tables and figures": {
+      "wall_seconds_this_invocation": 0.7281064169947058
+    },
+    "Generate English reports": {
+      "wall_seconds_this_invocation": 0.003558875061571598
+    },
+    "Execute five results-only notebooks": {
+      "wall_seconds_this_invocation": 3.7690012499224395
+    }
+  },
+  "data_sha256": "2716e1bf0fd157a93b5bf86924d9088419dfbac2022c6cd90030220634f616dc",
+  "memory_measurement_scope": "This pipeline invocation only; process-tree RSS sampled every 0.25s. Shared pages can be counted twice. Reused earlier computations are excluded.",
+  "completed_utc": "2026-10-25T11:09:33.196454+00:00",
+  "elapsed_seconds": 7.5134756250772625,
+  "peak_sampled_process_tree_rss_bytes": 1646739456,
+  "output_files": {
+    "aa_peeking.csv": "bc07f7ae26c877bafaebaf501948f1ed87eddd7ad543fba33bb898bcb3a428c6",
+    "ab_results.json": "1e8952cb7928776bed50836c7ef3c9c62ea8f0c37e745cc961389b949ebb9d6a",
+    "adjustment.csv": "7367ebc1d6c368e095d77d9e34a1cb9362f017f692344bd293e8936d97963b03",
+    "balance_diagnostics.json": "b7d40bee10491836ef6d1132c6107337553d9bdd4f4db55aeb8009da23d0b463",
+    "bayesian.csv": "59988af4421f8e0b676d8ff46fc5451f05e46a4b28cc476860d779f2a8fa3cf9",
+    "configuration.json": "e5f30766abf32dda9b2766eec64ca80cb91dfdc7d46b48e0fb51a86224cbfa05",
+    "coverage.csv": "512147de181ecc562c329abff2971fba08e0324d6431867ad0a293ec8f03fbda",
+    "data_audit.json": "2ac9ae87dce15c93ec761399ea14cabeb5ce36c0022d4f2dd092a032b9a06d43",
+    "feature_balance.csv": "df6625ec1b131165027acf4c5affcc3cc003ea1e5ec905f15330a811f5f94bdb",
+    "figures/average_effects.png": "74ef3ac5787dce32b7a430e87aedb7be7c029b61cbfe527a811be8ee628908ba",
+    "figures/balance.png": "b2632be5d316e9a7e51a7a14ef26b19a30f391172cf6cd1eff4320d63fd035f8",
+    "figures/peeking.png": "d0a9900e9d6c87420fd7af1ed687b5ed59a6e880a90607824e077fadde6193e0",
+    "figures/power_coverage.png": "9d9aeb191aa69039be5d329028954f4c25e223d47d0c1a2360284047478da058",
+    "figures/qini.png": "df79dfa14b8119c5a2a95ee2bb2173dcbe78a9731c0b93bf9e8a1d33457daf67",
+    "figures/targeting.png": "f4a5486f470bfcdba86c49c4702abf9e9f69e5d0ac927e920fc8bb39b8bc0a8d",
+    "frequentist.csv": "36429691e9a0bc7d26bd07f30688ed4b93216de9914606ae5cbb00e4c7f3fe41",
+    "iv.csv": "4593a1f039006848024f80381cc0656c0b92593c919fba47d727f7deedc74d4a",
+    "peeking_trajectory.csv": "30a1d3d51a7adc4cea6557eead23b8c53f86fd43d1bb1ad3f859468d5195a622",
+    "power.csv": "fdc4245993025111ac382b3f643f74b111e1474f67d25278149fbbec97ca4037",
+    "regression_adjustment.json": "9f527aee03262d1042e60aa157a7a7590c3d267b1422787cf2f376e40873a9e1",
+    "simulations.json": "ab49669e14c8c5142dc300e82d8b967971ad59d6b848ced84aeeb256c7f7bc86",
+    "statistics_timing.json": "d794ec50c4d73e97ffaed797526998656d07e5a83ac961b271f52c59c6d47afa",
+    "uplift_bootstrap.npz": "27436e004207dfa53a20e85319e931d2da8c2419c9650b366f6e88a74f9d230c",
+    "uplift_curves.csv": "52af5137a3acfdc4fd5f12e5b8ab6557ad084247dbf46eaa1bd6f8d2c2b5a3a6",
+    "uplift_qini.csv": "761b6845252edfae9581fba381ff8e5ef1162a7f0d3aee545beef52e0abf6cb0",
+    "uplift_results.json": "89045b70e0b4dfcfa327e9a4c81b192768ff5d4680a41bed322a984ccbd95421",
+    "uplift_targeting.csv": "d33c0219c8652ce39d5b7d47760c7521ef2eb254d57770441ef8ce156393eb6a"
+  }
+}

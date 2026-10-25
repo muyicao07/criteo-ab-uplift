@@ -1,0 +1,74 @@
+{
+  "reference": "Approximate SMD standard deviation under simple random assignment: sqrt(1/n1 + 1/n0)",
+  "n_treatment": 11882655,
+  "n_control": 2096937,
+  "randomisation_sd": 0.000749027586326405,
+  "n_features": 12,
+  "n_below_smd_0_1": 12,
+  "min_absolute_smd": 0.005159528554154,
+  "max_absolute_smd": 0.0488363403045533,
+  "min_absolute_randomisation_z": 6.888302444852308,
+  "max_absolute_randomisation_z": 65.1996551209421,
+  "features": [
+    {
+      "feature": "f0",
+      "smd": -0.0068656192802077,
+      "randomisation_z": -9.16604328804501
+    },
+    {
+      "feature": "f1",
+      "smd": 0.0239943938024232,
+      "randomisation_z": 32.03405887906393
+    },
+    {
+      "feature": "f2",
+      "smd": -0.0062409889677054,
+      "randomisation_z": -8.332121648969219
+    },
+    {
+      "feature": "f3",
+      "smd": -0.0488363403045533,
+      "randomisation_z": -65.1996551209421
+    },
+    {
+      "feature": "f4",
+      "smd": 0.0079656612293337,
+      "randomisation_z": 10.634670037189379
+    },
+    {
+      "feature": "f5",
+      "smd": -0.0305568305237969,
+      "randomisation_z": -40.7953339524682
+    },
+    {
+      "feature": "f6",
+      "smd": -0.0404480687955295,
+      "randomisation_z": -54.00077318100721
+    },
+    {
+      "feature": "f7",
+      "smd": 0.0212695302161586,
+      "randomisation_z": 28.39619074709211
+    },
+    {
+      "feature": "f8",
+      "smd": -0.0224333360036171,
+      "randomisation_z": -29.94994632125777
+    },
+    {
+      "feature": "f9",
+      "smd": 0.0240010577147009,
+      "randomisation_z": 32.04295563053123
+    },
+    {
+      "feature": "f10",
+      "smd": 0.0105634619883035,
+      "randomisation_z": 14.102901122923717
+    },
+    {
+      "feature": "f11",
+      "smd": -0.005159528554154,
+      "randomisation_z": -6.888302444852308
+    }
+  ]
+}

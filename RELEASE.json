@@ -1,0 +1,5 @@
+{
+  "commit": "dac2651b56940722845246b325c940cdd93eacc1",
+  "source_sha256": "06baa3310e679c99c19c5313e0224de0f51ff6be5606ab85573009d2ac1015aa",
+  "description": "Committed source shipped in this package. Each run manifest records the source used for its results."
+}

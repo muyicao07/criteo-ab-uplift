@@ -1,0 +1,52 @@
+{
+  "seed": 2026,
+  "expected_rows": 13979592,
+  "train_fraction": 0.7,
+  "stratify": [
+    "treatment",
+    "visit"
+  ],
+  "primary_outcome": "visit",
+  "secondary_outcome": "conversion",
+  "primary_model": "x_learner",
+  "bootstrap_repetitions": 200,
+  "bootstrap_ci": "95% percentile",
+  "budgets": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "threads": 4,
+  "lightgbm": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_child_samples": 2000,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "force_col_wise": true,
+    "deterministic": true,
+    "verbosity": -1
+  },
+  "outcome_objective": "binary",
+  "effect_objective": "regression_l2",
+  "aa_repetitions": 1000,
+  "power_repetitions": 500,
+  "power_total_n": [
+    10000,
+    100000,
+    1000000
+  ],
+  "peeking_repetitions": 1000,
+  "peeking_increment_per_arm": 10000,
+  "peeking_looks": 50,
+  "coverage_repetitions": 1000,
+  "coverage_per_arm_n": [
+    500,
+    2000,
+    10000
+  ],
+  "posterior_draws_full": 100000,
+  "posterior_draws_coverage": 2000
+}

@@ -1,0 +1,109 @@
+{
+  "n_total": 13979592,
+  "outcomes": {
+    "visit": {
+      "n": 13979592,
+      "tau_adjusted": 0.007733801738809609,
+      "se_adjusted": 0.0001312566560616577,
+      "tau_adj": 0.007733801738809609,
+      "se_adj": 0.0001312566560616577,
+      "ci_low": 0.007476543420197599,
+      "ci_high": 0.007991060057421619,
+      "tau_unadjusted": 0.010342403129198284,
+      "se_unadjusted_hc2": 0.00014631645066032718,
+      "unadjusted_ci_low": 0.010055628155558312,
+      "unadjusted_ci_high": 0.010629178102838257,
+      "se_ratio": 0.8970738113813961,
+      "adjusted_mean_control": 0.040286059152539105,
+      "adjusted_mean_treated": 0.048019860891348715,
+      "arm_hc2_variances": [
+        1.4497952793819062e-08,
+        2.730356966669244e-09
+      ],
+      "arm_residual_sums_of_squares": [
+        57645.60508588486,
+        392323.96222494415
+      ]
+    },
+    "conversion": {
+      "n": 13979592,
+      "tau_adjusted": 0.0010016583729977368,
+      "se_adjusted": 3.397737759739252e-05,
+      "tau_adj": 0.0010016583729977368,
+      "se_adj": 3.397737759739252e-05,
+      "ci_low": 0.0009350639366177293,
+      "ci_high": 0.001068252809377744,
+      "tau_unadjusted": 0.0011518730521316279,
+      "se_unadjusted_hc2": 3.437169028999274e-05,
+      "unadjusted_ci_low": 0.001084505777075477,
+      "unadjusted_ci_high": 0.0012192403271877787,
+      "se_ratio": 0.9885279807517925,
+      "adjusted_mean_control": 0.0020501991212423317,
+      "adjusted_mean_treated": 0.0030518574942400684,
+      "arm_hc2_variances": [
+        9.320817353879514e-10,
+        2.223804530078397e-10
+      ],
+      "arm_residual_sums_of_squares": [
+        3606.7650869230324,
+        32174.061431838345
+      ]
+    }
+  },
+  "method": "Lin fully interacted OLS, two-pass arm regressions, HC2 sandwich",
+  "mean_handling": "Full-sample covariate mean treated as fixed",
+  "unadjusted_method": "Intercept plus treatment OLS with HC2: s1^2/n1 + s0^2/n0",
+  "feature_dtype": "float64",
+  "accumulation_dtype": "float64",
+  "chunk_rows": 100000,
+  "diagnostics": [
+    {
+      "treatment": 0,
+      "rank": 13,
+      "columns": 13,
+      "condition_number": 30.105551377351702,
+      "rank_tolerance": 1.908452984272785e-08,
+      "numerical_note": null
+    },
+    {
+      "treatment": 1,
+      "rank": 13,
+      "columns": 13,
+      "condition_number": 32.49340066824565,
+      "rank_tolerance": 1.218465675793349e-07,
+      "numerical_note": null
+    }
+  ],
+  "max_leverage_by_arm": [
+    0.0022467846213469304,
+    0.0003318005959192976
+  ],
+  "feature_means": [
+    19.620297486804557,
+    10.06997650920992,
+    8.446582307013749,
+    4.178923067692408,
+    10.338837295131759,
+    4.028512923328566,
+    -4.155355515047561,
+    5.101764646730926,
+    3.93358083795111,
+    16.02763833004895,
+    5.3333955568134135,
+    -0.17096724768330707
+  ],
+  "feature_scales": [
+    5.377463821797041,
+    0.10475573081890398,
+    0.29931609979350315,
+    1.3366449970839527,
+    0.3433081489215993,
+    0.4310974443381357,
+    4.577914125554147,
+    1.2052477300989668,
+    0.0566595844219342,
+    7.018974878926179,
+    0.16822884744629568,
+    0.022832768365475074
+  ]
+}

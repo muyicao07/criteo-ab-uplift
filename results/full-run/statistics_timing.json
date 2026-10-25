@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-10-25T10:25:12.765982+00:00",
+  "seed": 2026,
+  "source_n": 13979592,
+  "data_sha256": "2716e1bf0fd157a93b5bf86924d9088419dfbac2022c6cd90030220634f616dc",
+  "statistics_seconds": 0.018816374940797687,
+  "simulations_seconds": 1.1652094998862594,
+  "total_seconds": 1.1867859158664942,
+  "finished_utc": "2026-10-25T10:25:13.952793+00:00"
+}

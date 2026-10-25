@@ -1,0 +1,278 @@
+{
+  "primary_model": "x_learner",
+  "outcome": "visit",
+  "all_rows_used": true,
+  "n_total": 13979592,
+  "n_train": 9785714,
+  "n_test": 4193878,
+  "split": {
+    "test_fraction": 0.3,
+    "stratification": [
+      "treatment",
+      "visit"
+    ],
+    "seed": 2026,
+    "counts": {
+      "train": {
+        "T=0,visit=0": 1411782,
+        "T=0,visit=1": 56074,
+        "T=1,visit=0": 7914081,
+        "T=1,visit=1": 403777
+      },
+      "test": {
+        "T=0,visit=0": 605050,
+        "T=0,visit=1": 24031,
+        "T=1,visit=0": 3391750,
+        "T=1,visit=1": 173047
+      }
+    }
+  },
+  "treatment_propensity_train": 0.8500001124087624,
+  "parameters": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_child_samples": 2000,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "force_col_wise": true,
+    "deterministic": true,
+    "verbosity": -1,
+    "random_state": 2026,
+    "n_jobs": 4
+  },
+  "effect_objective": "regression_l2",
+  "outcome_objective": "binary",
+  "x_learner_formula": "g * tau_0 + (1-g) * tau_1",
+  "bootstrap": {
+    "repetitions": 200,
+    "seed": 2027,
+    "method": "paired ordinary iid test-row bootstrap with exact integer multiplicities",
+    "ci": "95% percentile",
+    "models_fixed": true,
+    "reselect_top_k_each_draw": true,
+    "exact_floor_k_n": true,
+    "uncertainty_scope": "Test-sample uncertainty only; fitted models remain fixed."
+  },
+  "tie_break_seed": 2026,
+  "qini_definition": "sklift.metrics.qini_auc_score(negative_effect=True)",
+  "unit": "incremental visits per 1,000 users selected by the policy and assigned to treatment (intention-to-treat, including users who were assigned but not exposed)",
+  "models": {
+    "x_learner": {
+      "n": 4193878,
+      "n_treatment": 3564797,
+      "n_control": 629081,
+      "random_per_1000": 10.343128954013881,
+      "targeting": [
+        {
+          "k": 0.1,
+          "n_selected": 419387,
+          "n_treatment": 363404,
+          "n_control": 55983,
+          "visit_treatment": 100790,
+          "visit_control": 12075,
+          "incremental_visits_per_1000": 61.65924900884395,
+          "gain_vs_random": 51.316120054830066,
+          "ci": [
+            57.78220534884501,
+            65.46209811751565
+          ],
+          "gain_ci": [
+            47.972114094166294,
+            54.61209830213268
+          ]
+        },
+        {
+          "k": 0.3,
+          "n_selected": 1258163,
+          "n_treatment": 1075666,
+          "n_control": 182497,
+          "visit_treatment": 139793,
+          "visit_control": 18376,
+          "incremental_visits_per_1000": 29.267419394271162,
+          "gain_vs_random": 18.92429044025728,
+          "ci": [
+            27.740298251544733,
+            30.694197517650036
+          ],
+          "gain_ci": [
+            17.86479748013895,
+            20.0257560147647
+          ]
+        },
+        {
+          "k": 0.5,
+          "n_selected": 2096939,
+          "n_treatment": 1785400,
+          "n_control": 311539,
+          "visit_treatment": 146751,
+          "visit_control": 19459,
+          "incremental_visits_per_1000": 19.734146627388164,
+          "gain_vs_random": 9.391017673374282,
+          "ci": [
+            18.75819583122742,
+            20.627941450832783
+          ],
+          "gain_ci": [
+            8.912678357525243,
+            9.895898202779732
+          ]
+        }
+      ],
+      "qini_coefficient": 0.09000704821085892,
+      "qini_ci": [
+        0.08482779464787636,
+        0.09521538270494109
+      ],
+      "random_ci": [
+        9.806735922383513,
+        10.854851978515683
+      ]
+    },
+    "t_learner": {
+      "n": 4193878,
+      "n_treatment": 3564797,
+      "n_control": 629081,
+      "random_per_1000": 10.343128954013881,
+      "targeting": [
+        {
+          "k": 0.1,
+          "n_selected": 419387,
+          "n_treatment": 363275,
+          "n_control": 56112,
+          "visit_treatment": 102010,
+          "visit_control": 12343,
+          "incremental_visits_per_1000": 60.83577877032978,
+          "gain_vs_random": 50.492649816315904,
+          "ci": [
+            57.28808541124035,
+            64.43268762060033
+          ],
+          "gain_ci": [
+            47.321713741780684,
+            53.71695962046297
+          ]
+        },
+        {
+          "k": 0.3,
+          "n_selected": 1258163,
+          "n_treatment": 1075470,
+          "n_control": 182693,
+          "visit_treatment": 136509,
+          "visit_control": 17838,
+          "incremental_visits_per_1000": 29.290412521667808,
+          "gain_vs_random": 18.947283567653926,
+          "ci": [
+            27.84071841186312,
+            30.89975174365175
+          ],
+          "gain_ci": [
+            17.857060034840412,
+            20.136401845371907
+          ]
+        },
+        {
+          "k": 0.5,
+          "n_selected": 2096939,
+          "n_treatment": 1785890,
+          "n_control": 311049,
+          "visit_treatment": 141112,
+          "visit_control": 18576,
+          "incremental_visits_per_1000": 19.294450730755717,
+          "gain_vs_random": 8.951321776741835,
+          "ci": [
+            18.371019950604957,
+            20.109802691270982
+          ],
+          "gain_ci": [
+            8.426099158171857,
+            9.445765654918786
+          ]
+        }
+      ],
+      "qini_coefficient": 0.08718935798169523,
+      "qini_ci": [
+        0.08158507593176584,
+        0.09233369418714021
+      ],
+      "random_ci": [
+        9.806735922383513,
+        10.854851978515683
+      ]
+    },
+    "response": {
+      "n": 4193878,
+      "n_treatment": 3564797,
+      "n_control": 629081,
+      "random_per_1000": 10.343128954013881,
+      "targeting": [
+        {
+          "k": 0.1,
+          "n_selected": 419387,
+          "n_treatment": 361120,
+          "n_control": 58267,
+          "visit_treatment": 135089,
+          "visit_control": 18813,
+          "incremental_visits_per_1000": 51.20767992210457,
+          "gain_vs_random": 40.86455096809068,
+          "ci": [
+            47.56619926009925,
+            55.89375960100875
+          ],
+          "gain_ci": [
+            37.512177908810266,
+            44.90628206537596
+          ]
+        },
+        {
+          "k": 0.3,
+          "n_selected": 1258163,
+          "n_treatment": 1074665,
+          "n_control": 183498,
+          "visit_treatment": 166900,
+          "visit_control": 23206,
+          "incremental_visits_per_1000": 28.839617460182847,
+          "gain_vs_random": 18.496488506168966,
+          "ci": [
+            27.27444929292055,
+            30.770561446494124
+          ],
+          "gain_ci": [
+            17.460698026049176,
+            19.850981386866824
+          ]
+        },
+        {
+          "k": 0.5,
+          "n_selected": 2096939,
+          "n_treatment": 1784876,
+          "n_control": 312063,
+          "visit_treatment": 171233,
+          "visit_control": 23795,
+          "incremental_visits_per_1000": 19.68488708919132,
+          "gain_vs_random": 9.34175813517744,
+          "ci": [
+            18.665634766876554,
+            20.712277539200638
+          ],
+          "gain_ci": [
+            8.87404337942137,
+            9.94935382044197
+          ]
+        }
+      ],
+      "qini_coefficient": 0.08418727654578552,
+      "qini_ci": [
+        0.07885282061272676,
+        0.09084616507099584
+      ],
+      "random_ci": [
+        9.806735922383513,
+        10.854851978515683
+      ]
+    }
+  },
+  "elapsed_seconds": 193.69688291708007,
+  "checkpoint_identity_sha256": "f578a7ed5afdc935b63f0cf0122ffb412ee81e0736c9aaf9a82564ec4e72111b"
+}
